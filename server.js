@@ -14,7 +14,6 @@ app.get("/latest", function(req, res) {
       if (err) return err;
       var coll = db.collection('coll2');
       coll.find({}, {_id: 0}, { limit : 10, sort: {_id: -1} }).toArray(function (e, d) {
-          console.log("asd");
           if (e){ console.log(e)};
             //   for (var i = 0; i < d.length; i++) {
               
